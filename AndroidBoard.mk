@@ -9,7 +9,7 @@ ALL_PREBUILT += $(file)
 $(file): $(TARGET_PREBUILT_KERNEL) | $(ACP)
 	$(transform-prebuilt-to-target)
 
-file := $(TARGET_ROOT_OUT)/init.supersonic.rc
+file := $(TARGET_ROOT_OUT)/init.inc.rc
 ALL_PREBUILT += $(file)
-$(file) : $(LOCAL_PATH)/init.supersonic.rc | $(ACP)
+$(file) : $(LOCAL_PATH)/init.inc.rc | $(ACP)
 	$(transform-prebuilt-to-target)
