@@ -13,3 +13,8 @@ file := $(TARGET_ROOT_OUT)/init.inc.rc
 ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/init.inc.rc | $(ACP)
 	$(transform-prebuilt-to-target)
+
+file := $(TARGET_RECOVERY_ROOT_OUT)/sbin/postrecoveryboot.sh
+ALL_PREBUILT += $(file)
+$(file) : $(LOCAL_PATH)/postrecoveryboot.sh | $(ACP)
+	$(transform-prebuilt-to-target)
