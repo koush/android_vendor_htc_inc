@@ -31,10 +31,6 @@ BOARD_USERDATAIMAGE_MAX_SIZE := $(call image-size-from-data-size,0x127c0000)
 # The size of a block that can be marked bad.
 BOARD_FLASH_BLOCK_SIZE := 131072
 
-USE_CAMERA_STUB := true
-
-BOARD_HAS_NO_SELECT_BUTTON := true
-
 BOARD_HAS_DATADATA := true
 BOARD_SDCARD_DEVICE_PRIMARY := /dev/block/mmcblk1p1
 BOARD_SDCARD_DEVICE_SECONDARY := /dev/block/mmcblk1
