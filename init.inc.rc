@@ -6,7 +6,7 @@ on init
     # START from umount/re-mount data
     #
     umount /data
-    mount yaffs2:ext3 sel?mtd@userdata:mmcblk0p1 /data nosuid noatime nodiratime
+    mount ext3 /dev/block/mmcblk0p1 /data nosuid noatime nodiratime
     exec /system/bin/e2fsck -p /dev/block/mmcblk0p1
     chown system system /data
     chmod 0771 /data
@@ -81,24 +81,6 @@ on init
     mount yaffs2 mtd@datadata /data/data nosuid nodev
     chown system system /data/data
     chmod 0771 /data/data
-
-    #
-    # START umount/re-mount cache
-    #
-    umount /cache
-    mount yaffs2:ext3 sel?mtd@cache:mmcblk0p2 /cache nosuid nodev noatime nodiratime
-    chown system cache /cache
-    chmod 0770 /cache
-
-    # This may have been created by the recovery system with odd permissions
-    chown system system /cache/recovery
-    chmod 0770 /cache/recovery
-    mkdir /cache/lost+found 0770
-    chown root root /cache/lost+found
-    chmod 0770 /cache/lost+found
-    #
-    # END umount/re-mount data
-    #
 
 on boot
     mkdir /data/misc/wifi 0770 wifi wifi

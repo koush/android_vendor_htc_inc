@@ -17,7 +17,4 @@
 # To be included directly by a device_magic_*.mk makefile;
 # do not use inherit-product on this file.
 
-DEVICE_PACKAGE_OVERLAYS := vendor/htc/magic/overlay vendor/htc/common-open/overlay
-
-PRODUCT_PACKAGES += \
-        FieldTest
+DEVICE_PACKAGE_OVERLAYS := vendor/htc/inc/overlay

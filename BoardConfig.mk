@@ -4,12 +4,12 @@
 
 TARGET_BOARD_PLATFORM := qsd8k
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno200
-TARGET_CPU_ABI := armeabi-v7a
-TARGET_CPU_ABI2 := armeabi
-TARGET_ARCH_VARIANT := armv7-a
-ARCH_ARM_HAVE_TLS_REGISTER := true
-TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
-TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
+TARGET_CPU_ABI := armeabi
+#TARGET_CPU_ABI2 := armeabi
+#TARGET_ARCH_VARIANT := armv7-a
+#ARCH_ARM_HAVE_TLS_REGISTER := true
+#TARGET_GLOBAL_CFLAGS += -mfpu=neon -mfloat-abi=softfp
+#TARGET_GLOBAL_CPPFLAGS += -mfpu=neon -mfloat-abi=softfp
 
 TARGET_NO_BOOTLOADER := true
 TARGET_BOOTLOADER_BOARD_NAME := inc
@@ -52,3 +52,10 @@ BOARD_DATA_DEVICE := /dev/block/mmcblk0p1
 BOARD_DATA_FILESYSTEM := ext3
 BOARD_CACHE_DEVICE := /dev/block/mmcblk0p2
 BOARD_CACHE_FILESYSTEM := ext3
+
+BOARD_EGL_CFG := vendor/htc/inc/egl.cfg
+
+ENABLE_ANIMATED_GIF := true
+ALLOW_LGPL := true
+
+#TARGET_PROVIDES_INIT_RC := true
