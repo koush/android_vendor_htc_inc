@@ -9,6 +9,15 @@ ALL_PREBUILT += $(file)
 $(file): $(TARGET_PREBUILT_KERNEL) | $(ACP)
 	$(transform-prebuilt-to-target)
 
+ifeq ($(TARGET_PREBUILT_RECOVERY_KERNEL),)
+TARGET_PREBUILT_RECOVERY_KERNEL := $(LOCAL_PATH)/recovery_kernel
+endif
+
+file := $(INSTALLED_RECOVERY_KERNEL_TARGET)
+ALL_PREBUILT += $(file)
+$(file): $(TARGET_PREBUILT_RECOVERY_KERNEL) | $(ACP)
+       $(transform-prebuilt-to-target)
+
 file := $(TARGET_ROOT_OUT)/init.inc.rc
 ALL_PREBUILT += $(file)
 $(file) : $(LOCAL_PATH)/init.inc.rc | $(ACP)
@@ -95,6 +104,7 @@ PRODUCT_COPY_FILES += \
     vendor/htc/inc/proprietary/WPDB.zip:/system/etc/WPDB.zip \
     vendor/htc/inc/proprietary/agps_rm:/system/etc/agps_rm \
     vendor/htc/inc/proprietary/audio.conf:/system/etc/bluez/audio.conf \
+    vendor/htc/inc/proprietary/gps.conf:/system/etc/bluez/gps.conf \
     vendor/htc/inc/proprietary/input.conf:/system/etc/bluez/input.conf \
     vendor/htc/inc/proprietary/main.conf:/system/etc/bluez/main.conf \
     vendor/htc/inc/proprietary/bookmarks.xml:/system/etc/bookmarks.xml \
@@ -109,14 +119,6 @@ PRODUCT_COPY_FILES += \
     vendor/htc/inc/proprietary/yamato_pfp.fw:/system/etc/firmware/yamato_pfp.fw \
     vendor/htc/inc/proprietary/yamato_pm4.fw:/system/etc/firmware/yamato_pm4.fw \
     vendor/htc/inc/proprietary/rt_tables:/system/etc/iproute2/rt_tables \
-    vendor/htc/inc/proprietary/android.hardware.camera.autofocus.xml:/system/etc/permissions/android.hardware.camera.autofocus.xml \
-    vendor/htc/inc/proprietary/android.software.live_wallpaper.xml:/system/etc/permissions/android.software.live_wallpaper.xml \
-    vendor/htc/inc/proprietary/com.cequint.platform.xml:/system/etc/permissions/com.cequint.platform.xml \
-    vendor/htc/inc/proprietary/com.google.android.datamessaging.xml:/system/etc/permissions/com.google.android.datamessaging.xml \
-    vendor/htc/inc/proprietary/com.google.android.gtalkservice.xml:/system/etc/permissions/com.google.android.gtalkservice.xml \
-    vendor/htc/inc/proprietary/com.google.android.maps.xml:/system/etc/permissions/com.google.android.maps.xml \
-    vendor/htc/inc/proprietary/com.htc.framework.xml:/system/etc/permissions/com.htc.framework.xml \
-    vendor/htc/inc/proprietary/required_hardware.xml:/system/etc/permissions/required_hardware.xml \
     vendor/htc/inc/proprietary/pvasflocal.cfg:/system/etc/pvasflocal.cfg \
     vendor/htc/inc/proprietary/ser2net.conf:/system/etc/ser2net.conf \
     vendor/htc/inc/proprietary/timezones.db:/system/etc/timezones.db \
@@ -125,13 +127,6 @@ PRODUCT_COPY_FILES += \
     vendor/htc/inc/proprietary/voicemail-conf.xml:/system/etc/voicemail-conf.xml \
     vendor/htc/inc/proprietary/vold.conf:/system/etc/vold.conf \
     vendor/htc/inc/proprietary/vomeOne.cfg:/system/etc/vomeOne.cfg \
-    vendor/htc/inc/proprietary/com.cequint.platform.jar:/system/framework/com.cequint.platform.jar \
-    vendor/htc/inc/proprietary/com.google.android.gtalkservice.jar:/system/framework/com.google.android.gtalkservice.jar \
-    vendor/htc/inc/proprietary/com.google.android.maps.jar:/system/framework/com.google.android.maps.jar \
-    vendor/htc/inc/proprietary/com.htc.android.easopen.jar:/system/framework/com.htc.android.easopen.jar \
-    vendor/htc/inc/proprietary/com.htc.android.pimlib.jar:/system/framework/com.htc.android.pimlib.jar \
-    vendor/htc/inc/proprietary/com.htc.framework.jar:/system/framework/com.htc.framework.jar \
-    vendor/htc/inc/proprietary/com.scalado.util.ScaladoUtil.jar:/system/framework/com.scalado.util.ScaladoUtil.jar \
     vendor/htc/inc/proprietary/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \
     vendor/htc/inc/proprietary/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \
     vendor/htc/inc/proprietary/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \
