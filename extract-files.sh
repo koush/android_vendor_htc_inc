@@ -122,6 +122,7 @@ adb pull /system/framework/com.scalado.util.ScaladoUtil.jar proprietary
 adb pull /system/lib/egl/libEGL_adreno200.so proprietary
 adb pull /system/lib/egl/libGLESv1_CM_adreno200.so proprietary
 adb pull /system/lib/egl/libGLESv2_adreno200.so proprietary
+adb pull /system/lib/hw/gralloc.qsd8k.so proprietary
 adb pull /system/lib/hw/sensors.inc.so proprietary
 adb pull /system/lib/libAudioTrimmer.so proprietary
 adb pull /system/lib/libDMCmd.so proprietary

@@ -130,6 +130,7 @@ PRODUCT_COPY_FILES += \
     vendor/htc/inc/proprietary/libEGL_adreno200.so:/system/lib/egl/libEGL_adreno200.so \
     vendor/htc/inc/proprietary/libGLESv1_CM_adreno200.so:/system/lib/egl/libGLESv1_CM_adreno200.so \
     vendor/htc/inc/proprietary/libGLESv2_adreno200.so:/system/lib/egl/libGLESv2_adreno200.so \
+    vendor/htc/inc/proprietary/gralloc.qsd8k.so:/system/lib/hw/gralloc.qsd8k.so \
     vendor/htc/inc/proprietary/sensors.inc.so:/system/lib/hw/sensors.inc.so \
     vendor/htc/inc/proprietary/libAudioTrimmer.so:/system/lib/libAudioTrimmer.so \
     vendor/htc/inc/proprietary/libDMCmd.so:/system/lib/libDMCmd.so \
