@@ -104,7 +104,7 @@ PRODUCT_COPY_FILES += \
     vendor/htc/inc/proprietary/WPDB.zip:/system/etc/WPDB.zip \
     vendor/htc/inc/proprietary/agps_rm:/system/etc/agps_rm \
     vendor/htc/inc/proprietary/audio.conf:/system/etc/bluez/audio.conf \
-    vendor/htc/inc/proprietary/gps.conf:/system/etc/bluez/gps.conf \
+    vendor/htc/inc/proprietary/gps.conf:/system/etc/gps.conf \
     vendor/htc/inc/proprietary/input.conf:/system/etc/bluez/input.conf \
     vendor/htc/inc/proprietary/main.conf:/system/etc/bluez/main.conf \
     vendor/htc/inc/proprietary/bookmarks.xml:/system/etc/bookmarks.xml \

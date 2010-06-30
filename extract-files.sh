@@ -81,7 +81,7 @@ adb pull /system/etc/TPA2018.csv proprietary
 adb pull /system/etc/WPDB.zip proprietary
 adb pull /system/etc/agps_rm proprietary
 adb pull /system/etc/bluez/audio.conf proprietary
-adb pull /system/etc/bluez/gps.conf proprietary
+adb pull /system/etc/gps.conf proprietary
 adb pull /system/etc/bluez/input.conf proprietary
 adb pull /system/etc/bluez/main.conf proprietary
 adb pull /system/etc/bookmarks.xml proprietary
