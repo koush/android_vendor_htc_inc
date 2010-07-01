@@ -23,6 +23,8 @@ WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/bcm4329.ko"
 WIFI_DRIVER_MODULE_ARG      := "firmware_path=/system/etc/firmware/fw_bcm4329.bin nvram_path=/proc/calibration"
 WIFI_DRIVER_MODULE_NAME     := "bcm4329"
 
+BOARD_NO_CACHED_BUFFERS := true
+
 BOARD_USES_GENERIC_AUDIO := false
 
 BOARD_KERNEL_CMDLINE := no_console_suspend=1
@@ -57,5 +59,3 @@ BOARD_EGL_CFG := vendor/htc/inc/egl.cfg
 
 ENABLE_ANIMATED_GIF := true
 ALLOW_LGPL := true
-
-#TARGET_PROVIDES_INIT_RC := true

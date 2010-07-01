@@ -32,11 +32,6 @@ PRODUCT_COPY_FILES += \
     vendor/htc/inc/proprietary/libgps.so:obj/lib/libgps.so \
     vendor/htc/inc/proprietary/libcamera.so:obj/lib/libcamera.so
 
-#file := $(TARGET_ROOT_OUT)/init.rc
-#$(file) : $(LOCAL_PATH)/init.rc | $(ACP)
-#	$(transform-prebuilt-to-target)
-#ALL_PREBUILT += $(file)
-
 # All the blobs necessary for passion
 PRODUCT_COPY_FILES += \
     vendor/htc/inc/proprietary/PPST:/system/bin/PPST \
