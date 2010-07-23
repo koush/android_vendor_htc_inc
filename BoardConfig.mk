@@ -23,7 +23,7 @@ WIFI_DRIVER_MODULE_PATH     := "/system/lib/modules/bcm4329.ko"
 WIFI_DRIVER_MODULE_ARG      := "firmware_path=/system/etc/firmware/fw_bcm4329.bin nvram_path=/proc/calibration"
 WIFI_DRIVER_MODULE_NAME     := "bcm4329"
 
-BOARD_NO_CACHED_BUFFERS := true
+#BOARD_NO_CACHED_BUFFERS := true
 
 BOARD_USES_GENERIC_AUDIO := false
 
@@ -34,6 +34,10 @@ BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_BCM := true
 
 TARGET_HARDWARE_3D := false
+
+BOARD_USES_QCOM_LIBS := true
+BOARD_VENDOR_USE_AKMD := akm8973
+BOARD_VENDOR_QCOM_AMSS_VERSION := 3200
 
 BOARD_GPS_LIBRARIES := libgps librpc
 
