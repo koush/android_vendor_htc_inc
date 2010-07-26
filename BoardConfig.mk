@@ -59,6 +59,8 @@ BOARD_DATA_FILESYSTEM := auto
 BOARD_CACHE_DEVICE := /dev/block/mmcblk0p2
 BOARD_CACHE_FILESYSTEM := auto
 
+BOARD_HAS_MTD_CACHE := true
+
 BOARD_EGL_CFG := vendor/htc/inc/egl.cfg
 
 ENABLE_ANIMATED_GIF := true
